@@ -14,6 +14,8 @@ app.get("/users/:userId", userController.getUserById);
 app.get("/users/email/:emailString", userController.getUserByEmail);
 app.get("/users/age/:age", userController.getUsersByAge)
 app.post("/users", userController.createUser);
+app.put("/users/:userId", userController.updateUserById);
+app.delete("/users/:userId", userController.deleteUserById);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
